@@ -1,0 +1,129 @@
+/* body{
+    background-image:url('./images/fondecran.jpg'); 
+    background-repeat: no-repeat;
+   
+} */
+.pageinscription{
+    background-image:url('./images/fondecran.jpg'); 
+    background-repeat: no-repeat;
+    
+}
+.pageconnexion{
+    background-image:url('./images/fdconnexion.png'); 
+    background-repeat: no-repeat;
+    
+}
+.pagecommentaire{
+    background-image:url('./images/fdcommentaire.jpg'); 
+    background-repeat: no-repeat;
+    
+}
+.pagelivreor{
+    background-image:url('./images/fdretour.png'); 
+    background-repeat: no-repeat;
+    
+}
+.page{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.277),rgba(213, 255, 225, 0.464)),  url('./images/fdpage.jpg'); 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 780px;
+    
+    
+}
+
+input {
+    margin: auto;
+	border: 1px solid black;
+	padding: 10px;
+	margin-left: 5px;
+    margin: 5px;
+    padding: 2%;
+}
+h1{
+    margin-top: 30px;
+    text-align: center;
+   
+}
+ .formu  {
+        
+        text-align: left;
+        width:500px;
+        background-color: #07070a78;
+        color: rgb(255, 255, 255);
+        border-radius: 2px ;
+        padding: 2%;
+        margin: auto;
+        border:1px solid black;
+} 
+.inscription{
+    display: flex;
+    justify-content: center;
+    
+}
+.inscription td {
+    font-size: 20px;
+    color:white;
+}
+.container-input{
+    display:flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.valider button{
+    display: block;
+    margin:auto;
+    border-radius: 10px;
+}
+
+
+header {
+    
+    margin-block: 2%;
+    background-color: rgba(198, 198, 245, 0.24);
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    text-decoration: none;
+}
+ header button{
+    background-color:rgba(198, 198, 245, 0.24);
+    width:10%;
+    height: 5%;
+    margin: 1%;
+    border: 2px solid rgba(19, 29, 87, 0.918);
+    cursor: pointer;
+    text-align: center;
+}
+
+a{
+    text-decoration:transparent;
+    color: black;
+}
+.texte p{
+    text-align: center;
+    margin-top:3%;
+}
+.modifadmin{
+    display:block;
+   margin:auto;
+   margin-top:20px;
+    
+}
+
+
+
+
+.footer{
+    background-color:bisque;
+    width:100%;
+    height: 50px;
+    bottom: 0px;
+    position: absolute;
+    
+    
+}
+.footer>p{
+    text-align: center;
+    padding-top:10px;
+}
