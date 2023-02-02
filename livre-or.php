@@ -82,7 +82,7 @@ $req = $pdo->query("SELECT login,commentaire, date FROM commentaires INNER JOIN 
         ?>
             <tbody>
                 <tr>
-                    <td style="border:1px solid black; text-align:center;min-width:500px;"><?php echo "<br>". $res['commentaire'] ?></td>
+                    <td style="border:1px solid black; text-align:center;min-width:500px;"><?php echo $res['commentaire'] ?></td>
                     <td style="border:1px solid black; text-align:center;min-width:150px"><?php echo  $res['login'] ?></td>
                     <td style="border:1px solid black; text-align:center;min-width:200px;"><?php echo $res['date'] ?></td>
                 </tr>
