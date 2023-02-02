@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 30 jan. 2023 à 11:19
+-- Généré le : jeu. 02 fév. 2023 à 13:58
 -- Version du serveur : 10.4.25-MariaDB
 -- Version de PHP : 8.1.10
 
@@ -31,16 +31,8 @@ CREATE TABLE `commentaires` (
   `id` int(11) NOT NULL,
   `commentaire` text NOT NULL,
   `id_utilisateur` int(11) NOT NULL,
-  `date` date NOT NULL DEFAULT current_timestamp()
+  `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `commentaires`
---
-
-INSERT INTO `commentaires` (`id`, `commentaire`, `id_utilisateur`, `date`) VALUES
-(17, 'bonjour et merci', 54, '2023-01-30'),
-(18, 'Merci pour votre super site, j\'espère vous lire encore longtemps', 55, '2023-01-30');
 
 -- --------------------------------------------------------
 
@@ -60,7 +52,6 @@ CREATE TABLE `utilisateurs` (
 
 INSERT INTO `utilisateurs` (`id`, `login`, `password`) VALUES
 (51, 'ric', '123'),
-(53, 'bob', '123'),
 (54, 'john', '123'),
 (55, 'Louis', '123');
 
@@ -88,7 +79,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
