@@ -2,14 +2,14 @@
 session_start();
 include('connect.php');
 include('header.php');
-include('footer.php');
+
 ?>
 <body class="pageconnexion">
 <?php
 
     if (isset($_SESSION['login']) == TRUE) {?> 
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light  bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Site L D OR</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@ include('footer.php');
 </nav>
        <?php
          } else {?>
-         <nav class="navbar navbar-expand-lg bg-body-tertiary">
+         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Site L D OR</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
 }
     
 ?><br><br>
-
+<div style="height:100vh;">
 <div class="formu">
             <form action="" method="post">
                 <table>
@@ -99,8 +99,11 @@ if (isset($_POST['submit'])) {
                  <button name="submit" class="btn btn-success">Valider</button></div>
             </form>
             
-        </div><br><br>
-      
+        </div>
+</div>
+        <?php
+include('footer.php');
+?>
        
       
 </body>

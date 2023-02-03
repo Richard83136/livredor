@@ -2,7 +2,7 @@
 session_start();
 include('connect.php');
 include('header.php');
-include('footer.php');
+
 
 ?>
 <body class="pagelivreor">
@@ -10,7 +10,7 @@ include('footer.php');
 
     if (isset($_SESSION['login']) == TRUE) {?> 
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Site L D OR</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@ include('footer.php');
 </nav>
       <?php
          } else {?>
-         <nav class="navbar navbar-expand-lg bg-body-tertiary">
+         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Site L D OR</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,8 +66,9 @@ include('footer.php');
 
 $req = $pdo->query("SELECT login,commentaire, date FROM commentaires INNER JOIN utilisateurs ON utilisateurs.id = commentaires.id_utilisateur ORDER BY date DESC ");
 ?>
+<div style="height:100vh;">
     <h1>Les commentaires</h1><br><br>
-    <table  class="formu">
+    <table  class="formu ">
         
         <thead>
             <tr style="border:1px solid black;" >
@@ -80,19 +81,23 @@ $req = $pdo->query("SELECT login,commentaire, date FROM commentaires INNER JOIN 
         while($res = $req->fetch()){
         
         ?>
-            <tbody>
+            <tbody >
                 <tr>
-                    <td style="border:1px solid black; text-align:center;min-width:500px;"><?php echo $res['commentaire'] ?></td>
+                    <td style="border:1px solid black; text-align:center;min-width:300px;"><?php echo $res['commentaire'] ?></td>
                     <td style="border:1px solid black; text-align:center;min-width:150px"><?php echo  $res['login'] ?></td>
-                    <td style="border:1px solid black; text-align:center;min-width:200px;"><?php echo $res['date'] ?></td>
+                    <td style="border:1px solid black; text-align:center;min-width:150px;"><?php echo $res['date'] ?></td>
                 </tr>
             </tbody>
         <?php
         } 
         ?>
     </table>
+
+      </div>
     <?php
-    
+         
+         include('footer.php');
+         
     ?>
     
 </body>

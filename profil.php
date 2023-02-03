@@ -2,13 +2,13 @@
 session_start();
 include('connect.php');
 include('header.php');
-include('footer.php');
+
 ?>
 <?php
 
     if (isset($_SESSION['admin']) == TRUE) {?> 
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Site L D OR</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,8 +56,8 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-              
-        <div class="formu"> 
+        <div style="height:100vh;">   
+        <div class="formu"  > 
             
             <form method="post">
                 <table >
@@ -77,7 +77,10 @@ if (isset($_POST['submit'])) {
                 <button class="btn btn-success d-block mx-auto" name="submit">Modifier</button>
             </form>
         </div>
-        
+        </div>   
+    <?php
+    include('footer.php');
+    ?>    
   
 </body>
 

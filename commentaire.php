@@ -2,13 +2,13 @@
 session_start();
 include('connect.php');
 include('header.php');
-include('footer.php');
+
 ?>
 <body class="pagecommentaire">
 <?php
  
     if (isset($_SESSION['login']) == TRUE) {?> 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Site L D OR</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,17 +57,20 @@ if (isset($_POST['submit'])) {
   
     <h1>Envoyer un commentaire</h1><br><br>
 
-    <div class="formu">
+    <div class="formucommentaire">
     <form method="post">
         <table>
             <tr>
-                <td> <textarea name="commentaire"cols="45" rows="5" placeholder=" Entrer votre commentaire"></textarea></td>
+                <td> <textarea class="w-100"  name="commentaire"cols="40" rows="5" placeholder=" Entrer votre commentaire"></textarea></td>
             </tr>
         </table>
         <button class="btn btn-warning d-block mx-auto" name="submit">Envoyer</button>
     </form>
 </div>       
     
+<?php
+include('footer.php');
+?>
 </body>
 
 </html>
