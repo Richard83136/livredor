@@ -109,8 +109,8 @@ if (isset($_POST['submit'])) {
     
     <title>Inscription</title>
 </head>
-
-<body class="pageinscription">
+<div style="height:100vh;">
+<div class="pageinscription">
     <header>
         <h1>Page d'inscription</h1>
     </header>
@@ -153,6 +153,7 @@ if (isset($_POST['submit'])) {
             
         </form>
     </main>
+</div></div>
     <?php
     include('footer.php');
     ?>
